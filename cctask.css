@@ -109,7 +109,7 @@ body > img{
     opacity:0;
     animation: appear 2s ease-out forwards;
 }
-#hotspots div{
+#hotspots>div{
     margin:50px auto;
     color:white;
     font-family: 'Montserrat', sans-serif;
@@ -224,29 +224,6 @@ nav ul li a.active{
 .variety{
     font-size: 0.8em;
 }
-.hotspots form{
-    text-align: center;
-    width:50%;
-    margin:110px auto;
-    margin-top: 0;
-    align-items: center;
-    display: flex;
-}
-.hotspots form ul{
-    position: absolute;
-    width:100%;
-}
-.hotspots input{
-    text-align: center;
-    float:left;
-    outline: none;
-    width: 70%;
-    height: 5vh;
-    border-radius: 24px;
-    border:none;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.19);
-    margin-right: 5%;
-}
 .drop{
     position: relative;
     width:15%;
@@ -281,18 +258,6 @@ nav ul li a.active{
 }
 .drop ul li:hover{
     background: rgba(0, 0, 0, 0.6);
-}
-.hotspots button{
-    float: left;
-    outline: none;
-    border-radius: 30px;
-    width:100%;
-    background:rgba(0,0,0,0.6);
-    border:1px solid rgb(238, 253, 21);
-    color:white;
-    height:5vh;
-    margin:0;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.19);
 }
 .hotspots-container{
     width:90%;
@@ -383,7 +348,7 @@ nav ul li a.active{
     width: 95%;
     margin: auto;
     align-items: center;
-    height: 100%;
+    height: 80%;
     color:white;
     font-family: 'Montserrat',sans-serif;
     justify-content: space-between;
@@ -450,7 +415,79 @@ nav ul li a.active{
 .flip-active{
     transform: rotateY(180deg);
 }
-
+form{
+    width: 80%;
+    margin: 50px auto;
+    height: 50vh;
+    padding-top: 20px;
+}
+.form{
+    display: flex;
+    height: 30vh;
+}
+.form > div{
+    position: relative;
+    width: 48.5%;
+    margin-right: 3%;
+}
+.form > div > div{
+    position: relative;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: white;
+    overflow: hidden;
+}
+form .big{
+    display: inline;
+    height: 200px;
+    background-color: white;
+    overflow: hidden;
+}
+form .button{
+    text-align: center;
+    margin-top: 50px;
+}
+form button{
+    border: none;
+    padding: 5px 60px;
+    color: white;
+    background-color: #085078;
+    margin: 0;
+    font-size: 17px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+input,textarea{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 25px);
+    margin-top: 25px;
+    padding-left: 12px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    color: #085078;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+label{
+    position: absolute;
+    z-index: 10;
+    top: 12px;
+    left: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #666666;
+    
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
 @media screen and (max-width:1024px){
     .country-container{
         width:28%;
@@ -487,9 +524,7 @@ nav ul li a.active{
         width:40%;
     }
 
-    .hotspots form{
-        width:80%;
-    }
+
     .flip-container{
         width:150px;
         height: 250px;
