@@ -324,7 +324,7 @@ nav ul li a.active{
     /* padding-bottom: 150px; */
 }
 #contact{
-    height: 250px;
+    height: 200px;
     width: 100%;
     overflow: hidden;
     background-color: black;
@@ -360,14 +360,14 @@ nav ul li a.active{
     
 }
 .contact-2 .location{
-    width: 60%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: start;
 }
 .contact-2 .other{
     display: flex;
-    width: 40%;
+    width: 60%;
     justify-content: space-between;
 }
 .other div{
@@ -439,6 +439,9 @@ form{
     margin: 50px auto;
     height: 50vh;
     padding-top: 20px;
+}
+#mob{
+    display: none;
 }
 .form{
     display: flex;
@@ -566,9 +569,12 @@ input[type=number] {
     .flex{
         width: 70%;
     }
+    .contact{
+        height: 350px;
+    }
     .contact-2{
         flex-direction: column;
-        height: 70%;
+        height: 60%;
         margin: 5% auto;
     }
     .contact-2 .location{
@@ -579,8 +585,14 @@ input[type=number] {
         width: 100%;
         justify-content: space-evenly;
     }
+    .contact-2 .other > div:nth-child(3){
+        display: none;
+    }
     #home img{
         height: 40vh;
         margin: 30vh auto;
+    }
+    #mob{
+        display:block;
     }
 }
