@@ -66,3 +66,40 @@ years.click(function () {
     yearActList = prodList[years.index(this)]; 
     $('.tencontainer').append(yearActList);
 });
+document.getElementById('submit').onclick= (e)=>{
+    e.preventDefault()
+    let name = document.getElementById('name').value
+    let number = document.getElementById('number').value
+    let mail = document.getElementById('mail').value
+    let message = document.getElementById('message').value
+    if(name!="" && number!="" && mail!="" && message!=""){
+        emailjs.send("service_ebmb9tb","template_4zdsflw",{
+            from_name: name,
+            from_email: mail,
+            from_number: number,
+            message: message,
+            })
+            .then(function(){
+                document.getElementById('popup').innerHTML = "We have recieved your Inquiry. We will reach out to you as soon as possible."
+                document.getElementById('popup').classList.remove('error')
+                document.getElementById('popup').classList.remove('success')
+                setTimeout(()=>{document.getElementById('popup').classList.add('success')}, 10)
+            }),
+            function(error){
+                document.getElementById('popup').innerHTML = "There was an error while submitting the form. Please try again."
+                document.getElementById('popup').classList.remove('success')
+                document.getElementById('popup').classList.remove('error')
+                setTimeout(()=>{document.getElementById('popup').classList.add('error')}, 10)
+                
+            }
+    
+    }
+    else{
+        document.getElementById('popup').innerHTML = "All fields are required."
+        document.getElementById('popup').classList.remove('success')
+        document.getElementById('popup').classList.remove('error')
+        setTimeout(()=>{document.getElementById('popup').classList.add('error')}, 10)
+        
+    }
+
+}

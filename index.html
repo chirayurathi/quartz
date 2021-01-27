@@ -10,6 +10,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+    emailjs.init("user_3hddFGf12uYAqprtQCxPB");
+  })();
+</script>
 </head>
 <body>
 <nav>
@@ -32,6 +38,7 @@
       <div class="line3"></div>
     </div>
 </nav>
+<div id="popup">We have recieved your Inquiry. We will reach out to you as soon as possible.</div>
 <img src="./up.png" class="up" alt="">
 <img src="./down.png" class="down" alt="">
 <div class="sec home" id="home">
@@ -114,23 +121,23 @@
         <div>
             <div>
                 <label for="name">Your Name</label>
-                <input type="text" name="name" id="">
+                <input type="text" name="name" id="name">
             </div>
             <div>
                 <label for="number">Mobile Number</label>
-                <input type="number" style="font-weight: 700;" name="number" id="">
+                <input type="number" style="font-weight: 700;" name="number" id="number">
             </div>
             <div>
                 <label for="email">Email Id</label>
-                <input type="email" name="email" id="">
+                <input type="email" name="email" id="mail">
             </div>
         </div>
         <div class="big">
             <label for="more">Tell Us More Here</label>
-            <textarea name="more" id="" cols="30" rows="10"></textarea>
+            <textarea name="more" cols="30" rows="10" id="message"></textarea>
         </div>
     </div>
-    <div class="button"><button>Submit</button></div>
+    <div class="button"><button id="submit">Submit</button></div>
 </form>
 </div>
 <div class="sec" id="contact">
